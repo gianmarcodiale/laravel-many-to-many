@@ -44,7 +44,7 @@ body {
 
 @media (max-width: 767.98px) {
     .sidebar {
-        top: 5rem;
+        top: 0;
     }
 }
 
@@ -115,14 +115,8 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
-#category-index-left-col {
-    .add_category {
-        margin-top: 2rem;
-    }
-}
-
-#tag-index-left-col {
-    .add_tag {
-        margin-top: 1rem;
+.logout_btn {
+    &:hover a {
+        color: white!important;
     }
 }

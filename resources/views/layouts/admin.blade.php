@@ -26,7 +26,7 @@
 
 <body>
     <div id="app">
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 justify-content-start">
             <a style="font-family:Dancing Script, cursive; font-size:20px"
                 class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
@@ -35,19 +35,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <input class="form-control form-control-dark w-50" type="text" placeholder="Search" aria-label="Search">
-            <div class="navbar-nav px-1">
-                <div class="nav-item text-nowrap">
-                    <a class="btn btn-danger btn-md text-white" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </div>
         </header>
 
         <div class="container-fluid">
@@ -117,6 +104,19 @@
                                 <span data-feather="calendar"></span>
                                 This week
                             </button>
+                        </div>
+                        <div class="logout_btn">
+                            <div class="nav-item text-nowrap">
+                                <a class="btn btn-outline-danger btn-sm text-danger" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+            
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
                     </div>
                     @yield('content')
