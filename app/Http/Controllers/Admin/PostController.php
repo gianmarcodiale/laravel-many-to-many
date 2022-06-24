@@ -8,6 +8,7 @@ use App\Http\Requests\PostRequest;
 use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -16,9 +17,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user, Post $post)
     {
-        $posts = Post::orderByDesc('id')->get();
+        // Save the logged user in a variable
+        $authUser= Auth::id();
+        // Show only the post created by the logged user
+        $posts = Post::where('user_id', '=', $authUser)->get();
         //dd($posts);
         return view('admin.posts.index', compact('posts'));
     }
