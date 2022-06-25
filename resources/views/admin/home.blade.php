@@ -6,7 +6,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-body bg-success text-white">
+                    <div class="card-body bg-success text-white text-center">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -14,9 +14,10 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+                        <h3 class="text-white">Welcome back {{ Auth::user()->name }}</h3>
                     </div>
                 </div>
-                <h2 class="text-center mt-5">Welcome to BoolPress Administration Panel</h2>
+                <h2 class="text-center mt-5">BoolPress Administration Panel</h2>
             </div>
         </div>
     </div>

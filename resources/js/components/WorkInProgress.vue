@@ -1,22 +1,7 @@
 <template>
-    <div class="p-5 bg-light">
+    <div class="p-5 bg-light" id="landingPage">
         <div class="container">
-            <h1 class="display-3">Work In Progress</h1>
-            <p class="lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                aliquid ipsum rerum odio consequatur esse reprehenderit
-                perferendis eligendi laboriosam, magni dolorem voluptates
-                mollitia amet tempora non neque aliquam eveniet nulla!
-            </p>
-            <hr class="my-2" />
-            <p class="lead">
-                <a
-                    class="btn btn-primary btn-lg text-white"
-                    href="Jumbo action link"
-                    role="button"
-                    >Info</a
-                >
-            </p>
+            <h1 class="display-3 text-white text-center" id="heading">Work In Progress</h1>
         </div>
     </div>
 </template>
@@ -26,3 +11,16 @@ export default {
     name: 'WorkInProgress'
 }
 </script>
+
+<style lang="scss" scoped>
+#landingPage {
+    background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #heading {
+        text-shadow: 3px 6px rgba(0, 0, 0, 0.25)!important;
+    }
+}
+</style>

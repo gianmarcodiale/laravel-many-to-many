@@ -13,13 +13,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/admin.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
@@ -27,14 +20,15 @@
 <body>
     <div id="app">
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 justify-content-start">
-            <a style="font-family:Dancing Script, cursive; font-size:20px"
-                class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                 data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <input class="form-control form-control-dark w-50" type="text" placeholder="Search" aria-label="Search">
+            <div class="input-wrapper d-flex justify-content-center w-100">
+                <input class="form-control form-control-dark w-50 rounded-3 p-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
         </header>
 
         <div class="container-fluid">
@@ -97,13 +91,7 @@
                             <div class="btn-group me-2">
                                 <a class="btn btn-primary btn-sm text-white"
                                     href="{{ route('admin.posts.create') }}">Create Post</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
                             </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
                         </div>
                         <div class="logout_btn">
                             <div class="nav-item text-nowrap">
@@ -112,7 +100,7 @@
                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-            
+
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>

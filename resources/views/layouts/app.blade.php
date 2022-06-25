@@ -12,24 +12,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a style="font-family:Dancing Script, cursive; font-size:25px" class="navbar-brand"
+            <a class="navbar-brand"
                 href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                BoolPress
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,13 +37,7 @@
                         <a class="nav-link" href="">Homepage</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Contacts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Shop</a>
+                        <a class="nav-link" href="">Posts</a>
                     </li>
                 </ul>
 
@@ -94,7 +81,7 @@
             </div>
         </div>
     </nav>
-    <main class="py-4">
+    <main>
         @yield('app')
     </main>
 </body>
