@@ -18,7 +18,7 @@ class TagController extends Controller
     public function index()
     {   
         // Pass the tags list
-        $tags = Tag::all();
+        $tags = Tag::orderByDesc('id')->get();
         // Create index page for tags render
         return view('admin.tags.index', compact('tags'));
     }
@@ -40,7 +40,7 @@ class TagController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         // Create function for store new category data
         // Validate data
         $validated_data = $request->validate([
@@ -96,7 +96,7 @@ class TagController extends Controller
         $slug = Str::slug($request->name);
         $validated_data['slug'] = $slug;
         // Update validated data
-        
+        $tag->update($validated_data);
         // Redirect to a GET route
         return redirect()->back()->with('message', "Tag $slug Updated Succesfully");
     }

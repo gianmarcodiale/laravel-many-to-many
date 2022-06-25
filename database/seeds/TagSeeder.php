@@ -14,10 +14,10 @@ class TagSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        // Define a list of tags
-        // $tags = ['coding', 'laravel', 'css', 'js', 'vue', 'sql'];
+        // // Define a list of tags
+        // $tags = ['coding', 'laravel', 'css', 'js', 'vue', 'sql', 'starwars', 'games', 'tech', 'pcgames'];
 
-        // Iterate inside the array for database seeding
+        // // Iterate inside the array for database seeding
         // foreach ($tags as $tag) {
         //     $newTag = new Tag();
         //     $newTag->name = $tag;

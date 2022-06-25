@@ -96,7 +96,7 @@ class CategoryController extends Controller
         $slug = Str::slug($request->name);
         $validated_data['slug'] = $slug;
         // Update validated data
-        
+        $category->update($validated_data);
         // Redirect to a GET route
         return redirect()->back()->with('message', "Category $slug Updated Succesfully");
     }

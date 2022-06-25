@@ -75,9 +75,9 @@
                     @forelse ($tags as $tag)
                         {{-- Create an if statement for checking validation errors. If there is some validation error means that old exist. So if exist means that there are some errors in the validation and return the previously selected tags --}}
                         @if ($errors->any)
-                            <option value="{{ $tag->id }}" {{ in_array($tag->id, old('tags')) ? 'selected' : '' }}>
+                            <option value="{{ $tag->id }}" {{ in_array($tag->id, old('tags', [])) ? 'selected' : ''}}>
                                 {{ $tag->name }}</option>
-                        {{-- If old doesn't exist we render the post tags list --}}
+                            {{-- If old doesn't exist we render the post tags list --}}
                         @else
                             <option value="{{ $tag->id }}" {{ $post->tags->contains($tag->id) ? 'selected' : '' }}>
                                 {{ $tag->name }}</option>
