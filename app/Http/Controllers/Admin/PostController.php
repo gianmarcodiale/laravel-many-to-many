@@ -127,7 +127,7 @@ class PostController extends Controller
         // Create instance
         $post->update($validated_data);
         // Sync validated_data
-        $post->tags->sync($request->tags);
+        $post->tags()->sync($request->tags);
         // Redirect to a GET route
         return redirect()->route('admin.posts.index')->with('message', 'Post Updated Succesfully');
     }
