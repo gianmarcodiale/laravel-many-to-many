@@ -5110,8 +5110,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'WorkInProgress'
+  name: "WorkInProgress"
 });
 
 /***/ }),
@@ -10177,7 +10185,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#landingPage[data-v-ca42fbe4] {\n  background-image: url(\"https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80\");\n  height: 100vh;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n#landingPage #heading[data-v-ca42fbe4] {\n  text-shadow: 3px 6px rgba(0, 0, 0, 0.25) !important;\n}", ""]);
+exports.push([module.i, "#landingPage[data-v-ca42fbe4] {\n  background-image: url(\"https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80\");\n  height: 100vh;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n#landingPage .layer[data-v-ca42fbe4] {\n  background: rgba(51, 51, 51, 0.638);\n  border-radius: 30px;\n  padding: 10px;\n}\n#landingPage #heading[data-v-ca42fbe4] {\n  text-shadow: 3px 6px rgba(0, 0, 0, 0.25) !important;\n}", ""]);
 
 // exports
 
@@ -42040,15 +42048,23 @@ var staticRenderFns = [
       "div",
       { staticClass: "p-5 bg-light", attrs: { id: "landingPage" } },
       [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "h1",
-            {
-              staticClass: "display-3 text-white text-center",
-              attrs: { id: "heading" },
-            },
-            [_vm._v("Work In Progress")]
-          ),
+        _c("div", { staticClass: "layer" }, [
+          _c("div", { staticClass: "container" }, [
+            _c(
+              "h1",
+              {
+                staticClass: "display-3 text-white text-center",
+                attrs: { id: "heading" },
+              },
+              [_vm._v("\n                Work In Progress\n            ")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-white text-center" }, [
+              _vm._v(
+                "\n                We are building this site for giving you the best possible\n                user experience. Please have patience 🫶\n            "
+              ),
+            ]),
+          ]),
         ]),
       ]
     )
