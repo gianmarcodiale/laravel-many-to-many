@@ -1,7 +1,9 @@
 <?php
 
+use App\Mail\PostUpdatedAdminMessage;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +44,11 @@ Route::middleware('auth')
         ])->except(['show', 'create', 'edit']);
     });
 
-
+// Or we can create a route to redirect to the email that we send
+// Route::get('mailable', function () {
+//     $post = Post::findOrFail(1);
+//     return new PostUpdatedAdminMessage($post);
+// });
 
 // fallback route MUST be inserted at the end of web.php
 Route::get("{any?}", function () {

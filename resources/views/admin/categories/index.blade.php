@@ -27,7 +27,7 @@
                             </svg>
                         </span>
                         <input type="text" name="name" id="name" class="form-control"
-                            placeholder="Type a category" aria-describedby="basic-addon1">
+                            placeholder="Add category" aria-describedby="basic-addon1">
                         <div class="ms-1">
                             <button type="submit" class="btn btn-primary text-white">Add</button>
                         </div>

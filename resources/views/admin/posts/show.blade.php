@@ -5,7 +5,7 @@
         <div class="row justify-content-center p-4">
             <div class="postCard border border-secondary rounded p-4">
                 <div class="postImage">
-                    <img class="img-fluid" src="{{ $post->cover_image }}" alt="">
+                    <img class="img-fluid" src="{{ asset('storage/' . $post->cover_image) }}" alt="">
                 </div>
                 <div class="metadata mt-4">
                     <figure>

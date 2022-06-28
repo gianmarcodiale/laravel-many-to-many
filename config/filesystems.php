@@ -13,7 +13,10 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'public'),
+    // Setted on local by default but we are gonne set it 'public'
+    // After that we are gonna use a "symbolic link" that redirect user to a new folder called "storage"
+    // Then type in terminal "php artisan storage:link"
 
     /*
     |--------------------------------------------------------------------------
