@@ -18,7 +18,7 @@
                     </figure>
                     <div class="metadata mb-2 text-underline">
                         <div class="category">
-                            CATEGORY: <em>{{ $post->category ? $post->category->name : 'N/A' }}</em>
+                            <strong>Category: </strong> <em>{{ $post->category ? $post->category->name : 'N/A' }}</em>
                         </div>
                         {{-- tags div with if cycle for iterate checking if tags exists --}}
                         <div class="tags">

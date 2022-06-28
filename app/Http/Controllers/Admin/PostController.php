@@ -93,6 +93,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         // Pass all the category list to the create function in the PostController
+        // dd($post);
         $categories = Category::all();
         // Pass all the tag list
         $tags = Tag::all();
